@@ -58,6 +58,7 @@ class ParamsConverter:
     spaces = 8 * " "
 
     paramsmap = OrderedDict([
+        ("v", ["verbose_name", "str"]),
         ("m", ["max_length", "num"]),
         ("d", ["default", "mix"]),
 
@@ -71,7 +72,6 @@ class ParamsConverter:
         ("an", ["auto_now", "bool"]),
 
         ("h", ["help_text", "str"]),
-        ("v", ["verbose_name", "str"]),
     ])
 
     def feed(self, datas):
