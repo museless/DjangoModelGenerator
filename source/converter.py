@@ -30,9 +30,12 @@ class FieldConverter:
         "uu": "UUIDField",
         "u": "URLField",
         "e": "EmailField",
+
+        # foreign
+        "fo": "ForeignKey",
     }
 
-    template = "    {n} = {t}(\n        {a},{params}\n    )"
+    template = "    {n} = {t}(\n        \"{a}\",{params}\n    )"
 
     def feed(self, field):
         datas = deepcopy(field)
@@ -68,6 +71,7 @@ class ParamsConverter:
         ("an", ["auto_now", "bool"]),
 
         ("h", ["help_text", "str"]),
+        ("v", ["verbose_name", "str"]),
     ])
 
     def feed(self, datas):
