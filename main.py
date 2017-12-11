@@ -6,14 +6,44 @@ from source.generator import generator
 
 
 Dataset = {
+    "model": {
+    },
+
     "fields": [
         {
-            "n": "test",
-            "t": "c",
-            "a": "Test",
+            "n": "channel",
+            "t": "fo",
+            "a": "Channel",
 
             "fields": {
-                "m": 128
+                "od": "CASCADE",
+            }
+        },
+        {
+            "n": "code",
+            "t": "pm",
+            "a": "Http status code",
+
+            "fields": {
+                "b": 1
+            }
+        },
+        {
+            "n": "threshold",
+            "t": "pm",
+            "a": "Threshold for status code",
+
+            "fields": {
+                "b": 1,
+            }
+        },
+        {
+            "n": "email",
+            "t": "e",
+            "a": "Email for alarm",
+
+            "fields": {
+                "b": 1,
             }
         }
     ]

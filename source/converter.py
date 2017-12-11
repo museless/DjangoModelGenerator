@@ -71,6 +71,10 @@ class ParamsConverter:
         ("aa", ["auto_now_add", "bool"]),
         ("an", ["auto_now", "bool"]),
 
+        ("r", ["related_name", "str"]),
+
+        ("od", ["on_delete", "value"]),
+
         ("h", ["help_text", "str"]),
     ])
 
