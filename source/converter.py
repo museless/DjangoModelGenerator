@@ -61,6 +61,7 @@ class ParamsConverter:
         ("v", ["verbose_name", "str"]),
         ("m", ["max_length", "num"]),
         ("d", ["default", "mix"]),
+        ("u", ["unique", "bool"]),
 
         ("b", ["blank", "bool"]),
         ("n", ["null", "bool"]),
