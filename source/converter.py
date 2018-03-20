@@ -22,7 +22,8 @@ class FieldConverter:
         "t": "TextField",
 
         # date
-        "d": "DateTimeField",
+        "d": "DateField",
+        "dt": "DateTimeField",
         "tm": "TimeField",
 
         # special
@@ -41,7 +42,7 @@ class FieldConverter:
         datas = deepcopy(field)
         datas["t"] = self.fieldsmap[datas["t"]]
 
-        fields = field["fields"]
+        fields = field.get("fields", {})
 
         converter = ParamsConverter()
         params = converter.feed(fields)
